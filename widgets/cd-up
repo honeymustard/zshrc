@@ -1,0 +1,5 @@
+# vim: ft=zsh
+
+function cd-up {
+    cd .. && zle accept-line
+}

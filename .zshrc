@@ -14,6 +14,7 @@ export ZHOME=~/zshrc
 export ZSHRC="$ZHOME/.zshrc"
 export ZSCRIPTS="$ZHOME/scripts"
 export ZFUNCTIONS="$ZHOME/functions"
+export ZWIDGETS="$ZHOME/widgets"
 
 EDITOR="vim"
 HISTFILE="$ZHOME/.zshistory"
@@ -25,12 +26,12 @@ setopt autocd
 
 zstyle ':compinstall' filename $ZSHRC
 
+fpath=( $ZFUNCTIONS $ZWIDGETS "${fpath[@]}" )
+
 
 ##################################################
-# Commands
+# Functions
 ##################################################
-
-fpath=( $ZFUNCTIONS "${fpath[@]}" )
 
 autoload -Uz compinit; compinit
 autoload -Uz Startup; Startup
@@ -60,18 +61,23 @@ antigen apply
 # Widgets
 ##################################################
 
-function cd-up {
-    cd .. && zle accept-line
-}
-
+# Go up a directory
+autoload -Uz cd-up
 zle -N cd-up
+bindkey -M viins '^n' cd-up
+bindkey -M vicmd '^n' cd-up
+
+# Edit current command with Vim
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
 
 ##################################################
 # Key-Bindings
 ##################################################
 
 bindkey -v
-bindkey '^n' cd-up
 bindkey '^j' autosuggest-accept
 bindkey '^k' autosuggest-execute
 
