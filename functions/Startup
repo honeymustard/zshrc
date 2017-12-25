@@ -1,0 +1,5 @@
+# vim: ft=zsh
+
+echo
+echo ' Z Shell'
+echo

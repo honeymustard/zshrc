@@ -1,0 +1,5 @@
+# vim: ft=zsh
+
+echo
+printf " %-10s Show public ip from various sources\n" "Whoami"
+echo

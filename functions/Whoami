@@ -1,0 +1,11 @@
+# vim: ft=zsh
+
+IP1=`dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | tr -d '"'`
+IP2=`wget http://ipecho.net/plain -O - -q ; echo`
+
+echo
+echo " Crystal ball says.."
+echo
+echo " google: $IP1"
+echo " ipecho.net: $IP2"
+echo
