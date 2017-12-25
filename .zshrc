@@ -34,6 +34,7 @@ fpath=( $ZFUNCTIONS $ZWIDGETS "${fpath[@]}" )
 ##################################################
 
 autoload -Uz compinit; compinit
+autoload -Uz zcalc
 autoload -Uz Startup; Startup
 autoload -Uz Help
 autoload -Uz Whoami
