@@ -90,3 +90,4 @@ bindkey '^k' autosuggest-execute
 alias "ls=ls -lAh --group-directories-first --color=always"
 alias "ze=$EDITOR $ZSHRC"
 alias "zs=source $ZSHRC"
+alias "zc=zcalc"
