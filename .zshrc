@@ -15,6 +15,8 @@ export ZSHRC="$ZHOME/.zshrc"
 export ZSCRIPTS="$ZHOME/scripts"
 export ZFUNCTIONS="$ZHOME/functions"
 export ZWIDGETS="$ZHOME/widgets"
+export VHOME=~/vimrc
+export VIMRC="$VHOME/.vimrc"
 
 EDITOR="vim"
 HISTFILE="$ZHOME/.zshistory"
@@ -87,12 +89,15 @@ bindkey '^k' autosuggest-execute
 # Aliases
 ##################################################
 
+alias "h=history"
 alias "ls=ls -lAh --group-directories-first --color=always"
+alias "ve=$EDITOR $VIMRC"
 alias "ze=$EDITOR $ZSHRC"
 alias "zs=source $ZSHRC"
 alias "zc=zcalc"
 alias "exd=expressvpn disconnect"
 alias "exs=expressvpn status"
 alias "cdz=cd $ZHOME"
+alias "cdv=cd $VHOME"
 alias "cdow=cd ~/Downloads"
 alias "cdoc=cd ~/Documents"
