@@ -93,6 +93,7 @@ bindkey '^k' autosuggest-execute
 # Aliases
 ##################################################
 
+alias ":q=exit"
 alias "h=history"
 alias "ls=ls -lAh --group-directories-first --color=always"
 alias "ve=$EDITOR $VIMRC"
