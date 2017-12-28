@@ -75,6 +75,10 @@ autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
+# Prepend sudo to buffer
+autoload -Uz prepend-sudo
+zle -N prepend-sudo
+bindkey -M viins '^[s' prepend-sudo
 
 ##################################################
 # Key-Bindings
