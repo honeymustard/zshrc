@@ -46,7 +46,13 @@ autoload -Uz Whoami
 # Antigen
 ##################################################
 
-source /usr/share/zsh-antigen/antigen.zsh
+ANTI_SOURCE="$ZSCRIPTS/antigen.zsh"
+
+if [ ! -f $ANTI_SOURCE ]; then
+    curl -L git.io/antigen > $ANTI_SOURCE
+fi
+
+source $ANTI_SOURCE
 
 antigen use oh-my-zsh
 antigen theme robbyrussell
@@ -104,6 +110,7 @@ alias "exc=expressvpn connect"
 alias "exd=expressvpn disconnect"
 alias "exs=expressvpn status"
 alias "exl=expressvpn list | more"
+alias "cdh=cd ~/"
 alias "cdz=cd $ZHOME"
 alias "cdv=cd $VHOME"
 alias "cdow=cd ~/Downloads"
