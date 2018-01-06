@@ -49,7 +49,7 @@ autoload -Uz Whoami
 ANTI_SOURCE="$ZSCRIPTS/antigen.zsh"
 
 if [ ! -f $ANTI_SOURCE ]; then
-    curl -L git.io/antigen > $ANTI_SOURCE
+    curl -s -L git.io/antigen > $ANTI_SOURCE
 fi
 
 source $ANTI_SOURCE
