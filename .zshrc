@@ -5,7 +5,6 @@
 #
 ##################################################
 
-
 ##################################################
 # Variables
 ##################################################
@@ -113,7 +112,7 @@ alias "exl=expressvpn list | more"
 alias "cdh=cd ~/"
 alias "cdz=cd $ZHOME"
 alias "cdv=cd $VHOME"
-alias "cdow=cd ~/Downloads"
-alias "cdoc=cd ~/Documents"
+alias "cddow=cd ~/Downloads"
+alias "cddoc=cd ~/Documents"
 alias "cdsite=cd ~/Sites"
 alias "apgi=sudo apt-get install"
