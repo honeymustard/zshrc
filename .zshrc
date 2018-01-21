@@ -101,7 +101,7 @@ bindkey '^k' autosuggest-execute
 
 alias ":q=exit"
 alias "h=history"
-alias "ls=ls -lAh --group-directories-first --color=always"
+alias "ls=ls -lAhF --ignore=.git --group-directories-first --color=always"
 alias "ve=$EDITOR $VIMRC"
 alias "ze=$EDITOR $ZSHRC"
 alias "zs=source $ZSHRC"
